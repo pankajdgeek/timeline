@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Timeline</string>
+    <string name="timeline">TimeLine</string>
+    <string name="bookmark">Bookmark</string>
 </resources>

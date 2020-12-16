@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_timeline"
+        android:icon="@drawable/timeline"
+        android:title="@string/timeline" />
+    <item
+        android:id="@+id/action_bookmark"
+        android:icon="@drawable/bookmark"
+        android:title="@string/bookmark" />
+
+</menu>
