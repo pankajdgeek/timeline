@@ -1,12 +1,14 @@
 package com.pankaj.timeline.network
 
-import com.pankaj.pankaj.util.printInfoLog
+import com.pankaj.timeline.TimeLineApp
 import com.pankaj.timeline.data.BaseResponse
-import com.pankaj.timeline.data.Post
 import kotlinx.coroutines.flow.flow
-import kotlin.reflect.KSuspendFunction0
 
-fun  <T>makeNetworkCall(call: KSuspendFunction0<T>) =  flow  {
+inline fun <T> makeNetworkCall(crossinline call: suspend () -> T) = flow {
+    if (!TimeLineApp.isConnectNetwork) {
+        emit(BaseResponse.Error("Check your internet"))
+        return@flow
+    }
     emit(BaseResponse.Loading)
     try {
         emit(BaseResponse.Success(call.invoke()))

@@ -1,7 +1,6 @@
 package com.pankaj.timeline.data
 
 import androidx.room.Entity
-import androidx.room.Ignore
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
@@ -12,6 +11,6 @@ data class Post(
 	@SerializedName("id") val id: Int,
 	@SerializedName("title") val title: String,
 	@SerializedName("body") val body: String,
-//	@Ignore
-	@SerializedName("isBookmared") val isBookmarked: Boolean
+	@SerializedName("isBookmared") var isBookmared: Boolean = false,
+	@SerializedName("isUploaded") var isUploaded: Boolean = false
 )
