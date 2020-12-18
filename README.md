@@ -1,4 +1,6 @@
-#Timeline
+Timeline
+=====
+
 An open-source Android app for showing all post on timeline with bookmarking favourite posts.
 
 Introduction:
@@ -13,7 +15,7 @@ It contains some bells and whistles like **Kotlin**, **Coroutines**, **Jetpack**
 Screenshots & Gifs:
 =====
 <p>
-  <img src="https://i.imgur.com/JllJk0V.jpg" width="250" style="margin:2px"/>
+  <img src="https://i.imgur.com/vdgfk9F.jpg" width="250" style="margin:2px"/>
   <img src="https://i.imgur.com/s5c3dNz.jpg" width="250" style="margin:2px"/>
   <img src="https://i.imgur.com/JllJk0V.jpg" width="250" style="margin:2px"/>
 </p>
@@ -21,7 +23,7 @@ Screenshots & Gifs:
 Downloads:
 =====
 
-Download the latest APK [here](https://github.com/pankajdgeek/timeline/app/release/app-release.apk)
+Download the latest APK [here](https://github.com/pankajdgeek/timeline/tree/master/app/release/app-release.apk)
 
 
 Design Decisions & Dependencies:
