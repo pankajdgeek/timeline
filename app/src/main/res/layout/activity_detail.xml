@@ -6,7 +6,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.pankaj.timeline.ui.viewmodel.DetailViewModel" />
+            type="com.pankaj.timeline.viewmodel.DetailViewModel" />
         <variable
             name="view"
             type="android.view.View" />

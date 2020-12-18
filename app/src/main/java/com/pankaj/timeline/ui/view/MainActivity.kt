@@ -10,7 +10,7 @@ import com.pankaj.timeline.R
 import com.pankaj.timeline.TimeLineApp
 import com.pankaj.timeline.databinding.ActivityMainBinding
 import com.pankaj.timeline.ui.adapter.PostAdapter
-import com.pankaj.timeline.ui.viewmodel.MainViewModel
+import com.pankaj.timeline.viewmodel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.post_layout.*
 import org.koin.android.ext.android.inject

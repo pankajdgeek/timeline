@@ -10,7 +10,7 @@ import com.pankaj.pankaj.util.printInfoLog
 import com.pankaj.timeline.R
 import com.pankaj.timeline.databinding.ActivityDetailBinding
 import com.pankaj.timeline.ui.adapter.CommentAdapter
-import com.pankaj.timeline.ui.viewmodel.DetailViewModel
+import com.pankaj.timeline.viewmodel.DetailViewModel
 import com.pankaj.timeline.util.UploadWorker
 import kotlinx.android.synthetic.main.activity_detail.*
 import org.koin.android.ext.android.inject

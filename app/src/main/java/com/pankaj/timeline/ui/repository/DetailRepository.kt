@@ -1,7 +1,6 @@
 package com.pankaj.timeline.ui.repository
 
 import com.pankaj.pankaj.util.printInfoLog
-import com.pankaj.timeline.TimeLineApp
 import com.pankaj.timeline.db.AppDatabase
 import com.pankaj.timeline.network.Api
 import com.pankaj.timeline.network.makeNetworkCall
@@ -19,21 +18,9 @@ class DetailRepository(private val api: Api, private val db: AppDatabase) {
         }
     }
 
-    suspend fun addFavPost(id: Int, isBookmarked: Boolean): Boolean {
-        if (TimeLineApp.isConnectNetwork) {
-//                network call
-            saveFavPostDB(id, isBookmarked, true)
-            return true
-        } else {
-            saveFavPostDB(id, isBookmarked, false)
-            return false
-        }
+    fun saveFavPostDB(id: Int, isBookmarked: Boolean, isUploaded: Boolean) {
+        printInfoLog(this, " $id $isBookmarked $isUploaded")
+        db.postDao().updatePost(postId = id, bookmark = isBookmarked, upload = isUploaded)
 
-    }
-
-
-    private suspend fun saveFavPostDB(id: Int, isBookmarked: Boolean, isUploaded: Boolean) {
-        printInfoLog(this, " $id $isBookmarked")
-        db.postDao().updatePost(id, isBookmarked, isUploaded)
     }
 }

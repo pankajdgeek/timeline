@@ -14,8 +14,8 @@ interface PostDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(posts: List<Post>)
 
-    @Query("Update post set isBookmared=:isBookmarked and isUploaded = :isUploaded where id =:postId")
-    fun updatePost(postId: Int, isBookmarked: Boolean, isUploaded: Boolean)
+    @Query("Update post set isBookmared=:bookmark and isUploaded=:upload where id =:postId")
+    fun updatePost(postId: Int, bookmark: Boolean, upload: Boolean)
 
     @Query("Select * from Post where id in(:ids) and isBookmared = 1")
     fun postsBookmarked(ids: List<Int>): List<Post>
