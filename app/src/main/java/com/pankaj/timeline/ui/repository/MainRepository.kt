@@ -54,17 +54,6 @@ class MainRepository(private val api: Api, private val db: AppDatabase) {
     }
 
 
-    fun uploadFavList() {
-        CoroutineScope(Dispatchers.IO).launch {
-            val listPost = db.postDao().findPendingPostUpload()
-            if (listPost.isNotEmpty()){
-                printInfoLog(this,"uploading fav list to server")
-//            upload fav to server
-//            onSuccess
-//            db.postDao().updateUploadedPost(ids)
-            }
-        }
 
-    }
 
 }

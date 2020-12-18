@@ -77,10 +77,4 @@ class MainViewModel(private val repo: MainRepository) : ViewModel() {
         }
     }
 
-    fun uploadFavList() {
-        if (TimeLineApp.isConnectNetwork) {
-            repo.uploadFavList()
-        }
-    }
-
 }

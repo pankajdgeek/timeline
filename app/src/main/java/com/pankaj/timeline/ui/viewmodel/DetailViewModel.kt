@@ -17,6 +17,8 @@ class DetailViewModel(private val repo: DetailRepository) : ViewModel() {
     var isLoading = ObservableBoolean()
     var title = ObservableField<String>()
     var body = ObservableField<String>()
+    private val _saveUploadRequest = MutableLiveData<Boolean>()
+    val saveUploadRequest = _saveUploadRequest
     var postId = -1
     var isBookMarkerd = ObservableBoolean()
     private val _commentList: MutableLiveData<List<Comment>> = MutableLiveData()
@@ -45,8 +47,12 @@ class DetailViewModel(private val repo: DetailRepository) : ViewModel() {
     }
 
     fun bookMarkPost() {
-        repo.addFavPost(postId, !isBookMarkerd.get())
-        isBookMarkerd.set(!isBookMarkerd.get())
+        CoroutineScope(Dispatchers.IO).launch {
+            if (!repo.addFavPost(postId, !isBookMarkerd.get()))
+                _saveUploadRequest.postValue(true)
+            isBookMarkerd.set(!isBookMarkerd.get())
+
+        }
     }
 
 }
