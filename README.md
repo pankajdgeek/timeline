@@ -23,7 +23,7 @@ Screenshots & Gifs:
 Downloads:
 =====
 
-Download the latest APK [here](https://github.com/pankajdgeek/timeline/tree/master/app/release/app-release.apk)
+Download the latest APK [here](https://github.com/pankajdgeek/timeline/raw/master/app/release/app-release.apk)
 
 
 Design Decisions & Dependencies:
